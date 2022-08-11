@@ -19,9 +19,7 @@ locals {
 }
 
 module "get-iam-bindings" {
-  #source                     = "../tf-gcp-cvs/terraform-google-iam-bindings/"
-  #source                     = "git@github.aetna.com:tf-gcp-cvs/terraform-google-iam-bindings.git?ref=v4.0.0"
-  source                     = "git@github.aetna.com:tf-gcp-cvs/terraform-google-iam-bindings.git"
+  source                     = "github.com/paulinaMorenoA/terraform-google-iam-bindings"
   users_roles_needed         = var.external_users_roles_needed
   restricted_iam_admin_users = var.restricted_iam_admin_users
 }
